@@ -25,6 +25,7 @@ class Login extends StatelessWidget {
            
          ],
         ),
+        SizedBox(height: 32,),
 
         // titulos
         Text("Entre na sua conta",
@@ -51,10 +52,10 @@ class Login extends StatelessWidget {
           mainAxisAlignment:  MainAxisAlignment.center,
           children: [
             Text("Não tem uma conta?",
-            style: Tipografia.subtitulo,
+            style: Tipografia.subtitulo,),
             InkWell(child: Text("Cadastre-se")),
-          ]
-        )
+          ],
+        ),
       ],
     );
   }
