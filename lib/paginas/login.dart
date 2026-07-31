@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:primeiro_app/paginas/cadastro.dart';
 import 'package:primeiro_app/utilitarios/tipografia.dart';
 
-import 'Dashboard.dart';
+import 'dashboard.dart';
 
 class Login extends StatefulWidget {
   @override
