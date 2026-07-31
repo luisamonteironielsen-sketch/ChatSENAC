@@ -15,7 +15,9 @@ class Cadastro extends StatelessWidget {
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: GestureDetector(onTap: () {}, child: Icon(Icons.arrow_back)),
+                  child: GestureDetector(onTap: () {
+                    Navigator.pop(context);
+                  }, child: Icon(Icons.arrow_back)),
                 ),
                 SizedBox(height: 32),
 
