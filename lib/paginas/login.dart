@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/paginas/DashBoard.dart';
 import 'package:primeiro_app/paginas/cadastro.dart';
 import 'package:primeiro_app/utilitarios/tipografia.dart';
-
-import 'dashboard.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -13,13 +12,15 @@ class _LoginState extends State<Login> {
   final emailControlador = TextEditingController();
   final senhaControlador = TextEditingController();
 
-  void fazerLogin(BuildContext context) {
+  void fazerLogin() {
     if (emailControlador.text != "Test@gmail.com" ||
         senhaControlador.text != "123456") {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Email e/ou senha estão incorretas")),
       );
+      return;
     }
+    Navigator.push(context, MaterialPageRoute(builder: (build) => Dashboard()));
   }
 
   @override
@@ -78,7 +79,7 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 24),
                 // Botões
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: fazerLogin,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
