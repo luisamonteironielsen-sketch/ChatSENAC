@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
 import '../utilitarios/tipografia.dart';
 
 class Cadastro extends StatelessWidget {
+  const Cadastro({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -15,9 +17,12 @@ class Cadastro extends StatelessWidget {
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: GestureDetector(onTap: () {
-                    Navigator.pop(context);
-                  }, child: Icon(Icons.arrow_back)),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.arrow_back),
+                  ),
                 ),
                 SizedBox(height: 32),
 

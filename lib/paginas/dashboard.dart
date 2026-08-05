@@ -7,8 +7,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
-        centerTitle: true,
+        title: Text("ChatSENAC"),
       ),
     );
   }
